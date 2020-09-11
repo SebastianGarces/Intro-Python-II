@@ -80,25 +80,6 @@ def concat_items(items):
     return result
 
 
-def move_to(room, direction):
-    new_room = room
-
-    if direction == 'n':
-        if room.n_to:
-            new_room = room.n_to
-    if direction == 's':
-        if room.s_to:
-            new_room = room.s_to
-    if direction == 'e':
-        if room.e_to:
-            new_room = room.e_to
-    if direction == 'w':
-        if room.w_to:
-            new_room = room.w_to
-
-    return new_room
-
-
 def get_user_name():
     username = input('\nEnter your username:\n')
     return Player(username, room['outside'])
